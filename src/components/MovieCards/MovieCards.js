@@ -6,7 +6,7 @@ function MovieCards({ allMovieData}) {
     return (
       <div className="thumbnail">
         <img src={movie.poster_path} className="movie-img" alt="oppsie"/>
-        <h2 className="sr-only">{`${movie.title}`}</h2>
+        <h2 className="movie-titles">{`${movie.title}`}</h2>
       </div>
     );
   });
