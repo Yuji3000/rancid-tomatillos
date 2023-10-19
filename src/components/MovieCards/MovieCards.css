@@ -1,0 +1,23 @@
+.thumbnail {
+  box-sizing: border-box;
+  border: 2px solid #8DC13F;
+  color: #8DC13F;
+  background-color: #1B1464;
+  display: flex;
+  flex-direction: column;
+  padding: .75em;
+  max-width: 30rem;
+}
+
+/* The following code ensures that images will fill whatever their container is*/
+.movie-img {
+  /* display: block; */
+  border: 2px solid #8DC13F;
+  max-width: 100%
+}
+
+/* .card-container {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+} */
