@@ -2,7 +2,7 @@
 header {
   display: flex;
   align-items: center;
-  background: rgb(20, 19, 31) 100%;
+  background: black;
   /* opacity: .7; */
   width: 100vw;
   margin-left: 0;
@@ -10,5 +10,6 @@ header {
 }
 
 .site-name {
+  margin-left: 5vw;
   color: rgb(255, 255, 255);
 }

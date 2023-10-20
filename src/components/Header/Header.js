@@ -1,11 +1,10 @@
 import './Header.css';
-import webFilmsLogo from '../../assets/webfilmslogo.png';
+// import webFilmsLogo from '../../assets/webfilmslogo.png';
 
 function Header() {
   return (
     <header>
-      
-      <h1 className='site-name'>WebFilms</h1>
+      <h1 className='site-name'>WebFilms </h1>
     </header>
   );
 }
