@@ -1,6 +1,5 @@
 .thumbnail {
   box-sizing: border-box;
-  /* border: 2px solid #9ac3dd; */
   color: #feffff;
   background-color: #070708;
   display: flex;
@@ -9,16 +8,17 @@
   max-width: 30rem;
 }
 
-
 .movie-img {
-  /* display: block; */
   border-radius: 5px;  
   width: 10%vw;
   max-width: 100%
 }
 
-.card-container {
+.movie-card {
+  
+}
+/* .card-container {
   display: flex;
   cursor: pointer;
   flex-wrap: wrap;
-}
+} */

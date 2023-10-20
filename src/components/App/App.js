@@ -1,11 +1,12 @@
 import './App.css';
 // import { movieData } from '../../movieApi/movieData.js';
-import MovieCards from '../MovieCards/MovieCards';
+// import MovieCards from '../MovieCards/MovieCards';
+import MoviesContainer from '../MoviesContainer/MoviesContainer';
 import Header from '../Header/Header';
 import { useState, useEffect } from 'react'
 
 function App() {
-  const [movieCards, setMovies] = useState([])
+  const [movies, setMovies] = useState([])
   
   useEffect(() => {
     getAllMovies();
@@ -22,10 +23,7 @@ function App() {
   return (
     <main className="App">
       <Header />
-      <div className="card-container">
-        <MovieCards allMovieData={movieCards}/>
-
-      </div>
+        <MoviesContainer movies={movies}/>
     </main>
   );
 }
