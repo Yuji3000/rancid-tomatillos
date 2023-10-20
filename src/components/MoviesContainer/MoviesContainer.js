@@ -10,9 +10,10 @@ function MoviesContainer({ movies }){
         id = {movie.id}
       />
     </div>
-  ));
+  )
+  );
   return (
-  <div className="card-container">
+  <div className="moviecard-container">
     {allMovies}
   </div>
   )
