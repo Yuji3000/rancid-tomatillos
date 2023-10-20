@@ -4,7 +4,6 @@ import './Header.css';
 function Header() {
   return (
     <header>
-      
       <h1 className='site-name'>WebFilms </h1>
     </header>
   );
