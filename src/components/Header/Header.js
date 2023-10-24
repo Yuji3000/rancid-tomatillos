@@ -1,4 +1,4 @@
-import './Header.css';
+import './Header.css'
 // import webFilmsLogo from '../../assets/webfilmslogo.png';
 
 function Header() {
@@ -9,4 +9,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Header

@@ -1,6 +1,6 @@
-import "./MovieDetail.css";
-import { getAllData } from '../../api-calls';
-import { Component } from "react";
+import "./MovieDetail.css"
+import { getAllData } from '../../api-calls'
+import { Component } from "react"
 
 
 class MovieDetail extends Component{
@@ -13,20 +13,19 @@ class MovieDetail extends Component{
 
 
   componentDidMount = () => {
-    const { movieId } = this.props;
+    const { movieId } = this.props
 
     getAllData(`/movies/${movieId}`).then(data => {
         this.setState({ movie: data[0].movie })
-        // movie = data[0].movie
       })
       .catch(error => {
-        console.error('Error fetching movie details:');
-      });
-    };
+        console.error('Error fetching movie details')
+      })
+    }
 
 
   render = () => {
-    const { movie } = this.state;
+    const { movie } = this.state
       if (!movie) {
         return <p className='loading'>Loading...</p> 
       } else {
@@ -34,10 +33,9 @@ class MovieDetail extends Component{
         return (
           <h2 className="mTitle">{movie.id}</h2>
         )
-
       }
   }
 
 };
 
-export default MovieDetail;
+export default MovieDetail

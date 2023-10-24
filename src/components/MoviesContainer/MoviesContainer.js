@@ -1,4 +1,4 @@
-import "./MoviesContainer.css";
+import "./MoviesContainer.css"
 import MovieCards from '../MovieCards/MovieCards'
 
 function MoviesContainer({ movies }){
@@ -11,7 +11,7 @@ function MoviesContainer({ movies }){
       />
     </div>
   )
-  );
+  )
   return (
   <div className="moviecard-container">
     {allMovies}
@@ -19,4 +19,4 @@ function MoviesContainer({ movies }){
   )
 }
 
-export default MoviesContainer;
+export default MoviesContainer
