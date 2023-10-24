@@ -4,7 +4,7 @@ import './Header.css';
 function Header() {
   return (
     <header>
-      <h1 className='site-name'>WebFilms </h1>
+      <h1 className='site-name'>WebFilms not n*tfl*x</h1>
     </header>
   );
 }

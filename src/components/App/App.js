@@ -1,31 +1,40 @@
 import './App.css';
-// import { movieData } from '../../movieApi/movieData.js';
-// import MovieCards from '../MovieCards/MovieCards';
+import React, { Component } from 'react';
 import MoviesContainer from '../MoviesContainer/MoviesContainer';
 import Header from '../Header/Header';
-import { useState, useEffect } from 'react'
+import { getAllData } from '../../api-calls';
+import { Switch, Route } from 'react-router-dom';
+import MovieDetail from '../MovieDetail/MovieDetail';
 
-function App() {
-  const [movies, setMovies] = useState([])
-  
-  useEffect(() => {
-    getAllMovies();
-  },
-   []); 
 
-  function getAllMovies(){
-    fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies')
-    .then(response => response.json())
-    .then(data => setMovies(data.movies))
-    .catch(error => console.log(error.message))
+
+class App extends Component{
+  constructor () {
+    super();
+    this.state ={
+      movies: [],
+    }
   }
 
-  return (
+  componentDidMount = () => {
+    getAllData('/movies').then(data => {
+    this.setState({ movies: [...data[0].movies] })
+    })
+  };
+
+
+
+  render = () => {
+    return (
     <main className="App">
       <Header />
-        <MoviesContainer movies={movies}/>
+        <Switch>
+            <Route exact path="/" render={ () => <MoviesContainer movies={this.state.movies} />} />
+            <Route exact path="/movies/:movieId" render={ ({match}) => <MovieDetail movieId={match.params.movieId} /> }  />
+        </Switch>
     </main>
-  );
+    );
+  }
 }
 
 export default App;
