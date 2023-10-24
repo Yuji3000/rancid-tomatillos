@@ -23,7 +23,6 @@ class MovieDetail extends Component{
       })
     }
 
-
   render = () => {
     const { movie } = this.state
       if (!movie) {
@@ -31,7 +30,12 @@ class MovieDetail extends Component{
       } else {
         console.log(movie);
         return (
-          <h2 className="mTitle">{movie.id}</h2>
+          <div>
+            <div className="image-container">
+              <img src={movie.backdrop_path} className="movie-backdrop" alt={movie.title}></img>
+            </div>
+            <h2 className="mTitle">{movie.title}{movie.tag_line}{movie.overview}{movie.genres}{movie.release_date}</h2>
+          </div>
         )
       }
   }

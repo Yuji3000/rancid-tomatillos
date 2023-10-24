@@ -5,3 +5,23 @@
 .loading{
   color: white;
 }
+
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 70%; 
+  overflow: hidden;
+  padding-bottom: 10%; 
+}
+
+.movie-backdrop {
+
+  top: 0;
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+
+  z-index: 1; 
+  /* mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)); */
+}

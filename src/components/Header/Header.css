@@ -13,3 +13,12 @@ header {
   margin-left: 5vw;
   color: rgb(255, 255, 255);
 }
+
+.headerLink {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.headerLink:hover {
+  color: #5eff00;
+}
