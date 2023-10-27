@@ -1,7 +1,7 @@
 import './App.css'
 import React, { Component } from 'react'
 import MoviesContainer from '../MoviesContainer/MoviesContainer'
-import Header from '../Header/Header'
+import Nav from '../Nav/Nav'
 import { getAllData } from '../../api-calls'
 import { Switch, Route} from 'react-router-dom'
 import MovieDetail from '../MovieDetail/MovieDetail'
@@ -27,7 +27,7 @@ class App extends Component{
   render = () => {
     return (
     <main className="App">
-      <Header />
+      <Nav />
         <Switch>
             <Route exact path="/" render={ () => <MoviesContainer movies={this.state.movies} />} />
             <Route exact path="/movies/:movieId" render={ ({match}) => <MovieDetail movieId={match.params.movieId} /> }  />

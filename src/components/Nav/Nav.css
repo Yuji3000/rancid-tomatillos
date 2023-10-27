@@ -1,0 +1,31 @@
+
+.nav {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  padding: 20px;
+  
+  transition-timing-function: ease-in;
+  transition: all 0.5s;
+  display: flex;
+  justify-content: space-around;
+}
+
+.site-name {
+  margin-left: 5vw;
+  color: rgb(255, 255, 255);
+}
+
+.headerLink {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.headerLink:hover {
+  color: #5eff00;
+}
+
+.nav__black {
+  background-color: black;
+}
