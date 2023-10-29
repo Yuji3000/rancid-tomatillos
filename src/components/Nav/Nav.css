@@ -9,21 +9,25 @@
   transition-timing-function: ease-in;
   transition: all 0.5s;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .site-name {
-  margin-left: 5vw;
+  width: 200px;
+  object-fit: contain;
   color: rgb(255, 255, 255);
+  /* position: fixed; */
+  /* left: 0; */
 }
 
 .headerLink {
   text-decoration: none;
   color: #ffffff;
+  padding: 30px;
 }
 
 .headerLink:hover {
-  color: #5eff00;
+  color: #8d18b5;
 }
 
 .nav__black {

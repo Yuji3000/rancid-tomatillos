@@ -19,7 +19,7 @@ function Nav() {
 
 return (
   <div className={`nav ${show && "nav__black"}`}>
-    <h1 className='site-name'>WebFilms not n*tfl*x</h1>
+    <h1 className='site-name'>WebFilms</h1>
     <Link to={`/`}className="headerLink">
       <p>Home</p>
     </Link>

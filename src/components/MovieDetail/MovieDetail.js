@@ -30,12 +30,22 @@ class MovieDetail extends Component{
       } else {
         console.log(movie);
         return (
-          <div>
-            <div className="image-container">
-              <img src={movie.backdrop_path} className="movie-backdrop" alt={movie.title}></img>
+          <section>
+
+            <div>
+              <div className="image-container">
+                <img src={movie.backdrop_path} className="movie-backdrop" alt={movie.title}></img>
+              </div>
+              <section className="movie-details-container">
+                <div className="movie-details-box">
+                  <h2 className="mTitle">{movie.title}{movie.tag_line}</h2>
+                  <p className="single-movie-overview">{movie.overview}</p>
+                  <p className="single-movie-release-date">{movie.release_date}</p>
+                  <p className="single-movie-release-date">{(movie.genres).join(', ')}</p>
+                </div>
+              </section>
             </div>
-            <h2 className="mTitle">{movie.title}{movie.tag_line}{movie.overview}{movie.genres}{movie.release_date}</h2>
-          </div>
+          </section>
         )
       }
   }
