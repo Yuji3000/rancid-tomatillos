@@ -1,5 +1,5 @@
 import './App.css'
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import MoviesContainer from '../MoviesContainer/MoviesContainer'
 import Nav from '../Nav/Nav'
 import { getAllData } from '../../api-calls'
@@ -7,34 +7,29 @@ import { Switch, Route} from 'react-router-dom'
 import MovieDetail from '../MovieDetail/MovieDetail'
 
 
+function App() {
+  const [movies, setMovies] = useState([])
 
-class App extends Component{
-  constructor () {
-    super()
-    this.state ={
-      movies: [],
-    }
-  }
-
-  componentDidMount = () => {
-    getAllData('/movies').then(data => {
-    this.setState({ movies: [...data[0].movies] })
+  useEffect(() => {
+    getAllData('/movies').then((data) => {
+      setMovies([...data[0].movies])
     })
-  }
+  }, [])
 
-
-
-  render = () => {
-    return (
+  return (
     <main className="App">
       <Nav />
-        <Switch>
-            <Route exact path="/" render={ () => <MoviesContainer movies={this.state.movies} />} />
-            <Route exact path="/movies/:movieId" render={ ({match}) => <MovieDetail movieId={match.params.movieId} /> }  />
-        </Switch>
+      <Switch>
+        <Route exact path="/" render={() => <MoviesContainer movies={movies} />} />
+        <Route
+          exact
+          path="/movies/:movieId"
+          render={({ match }) => <MovieDetail movieId={match.params.movieId} />}
+        />
+      </Switch>
     </main>
-    )
-  }
+  )
 }
+
 
 export default App
