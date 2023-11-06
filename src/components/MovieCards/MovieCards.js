@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types';
 
 function MovieCards({ title, poster_path, id }) {
-  console.log('Props:', { title, poster_path, id });
   return (
     <div className="thumbnail" key={id}>
       <Link to={`/movies/${id}`}>
@@ -20,5 +19,4 @@ MovieCards.propTypes = {
   id: PropTypes.number.isRequired,
   poster_path: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  // average_rating: PropTypes.number.isRequired,
 };
