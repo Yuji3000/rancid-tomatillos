@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import "./MovieDetail.css"
 import { getAllData } from '../../api-calls'
+import PropTypes from 'prop-types'
 
 function MovieDetail({ movieId }) {
   const [movie, setMovie] = useState(null)
@@ -41,3 +42,16 @@ function MovieDetail({ movieId }) {
 
 export default MovieDetail
 
+MovieDetail.propTypes = {
+  moviedetail: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      backdrop_path: PropTypes.string.isRequired,
+      tag_line: PropTypes.string.isRequired,
+      overview: PropTypes.string.isRequired,
+      release_date: PropTypes.string.isRequired,
+      genres: PropTypes.array.isRequired,
+    })
+  )
+};

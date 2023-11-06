@@ -6,7 +6,7 @@ function MoviesContainer({ movies }){
     <div className='movie-card' key={movie.id}>
       <MovieCards 
         title = {movie.title}
-        img = {movie.poster_path}
+        poster_path = {movie.poster_path}
         id = {movie.id}
       />
     </div>
