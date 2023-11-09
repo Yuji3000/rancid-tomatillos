@@ -19,7 +19,7 @@ function MovieDetail({ movieId }) {
     };
 
     fetchData();
-  }, [movieId]);
+  }, []);
 
   function findTrailer(videos) {
     for (let i = 0; i < videos.length; i++) {
@@ -41,7 +41,7 @@ function MovieDetail({ movieId }) {
     };
 
     fetchMovieData();
-  }, [movieId]);
+  }, []);
 
   if (!movie) {
     return <p className="loading">Loading...</p>;
