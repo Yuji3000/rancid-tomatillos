@@ -8,14 +8,57 @@
 
 
 .image-container {
- display: flex;
- justify-content: center;
+  /* border-style: solid;
+  border-radius: 5px;
+  border-color: yellow; */
+
+  height: auto;
+  display: flex;
+  align-items: center;
 }
 
-.movie-backdrop {
-  height: 80%;
-  max-width: 70%;
-  margin: 80px 20px 10px 20px;
+.trailer-container {
+  display: flex;
+  height: 100%;
+  width: 25%;
+  /* border-style: solid;
+  border-radius: 5px;
+  border-color: red; */
+}
+
+.movie-backdrop {  
+  height: 50%;
+  max-width: 40%;
+  border-radius: 5px;
+  display: flex;
+  margin: 10px 20px 10px 20px;
+}
+
+.selected-movie-trailer {
+  border-radius: 5px;
+  max-width: 80%;
+  min-height: 50%;
+  margin: 10px;
+}
+
+.trailer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 80vh;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.movie-details-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+  width: 50vw;
+  /* border-style: solid;
+  border-radius: 5px;
+  border-color: pink; */
+
 }
 
 .single-movie-release-date {
