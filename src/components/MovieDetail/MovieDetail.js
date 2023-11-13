@@ -47,6 +47,7 @@ function MovieDetail({ movieId }) {
     return <p className="loading">Loading...</p>;
   }
 
+  // console.log(movie)
   return (
     <section>
       <div>
@@ -61,17 +62,18 @@ function MovieDetail({ movieId }) {
           ></iframe>
         </div>
         <div className="image-container">
+          
           <img src={movie.backdrop_path} className="movie-backdrop" alt={movie.title} />
           <div className="movie-details-box">
-            <h2 className="mTitle">{movie.title}{movie.tag_line}</h2>
-            <p className="single-movie-overview">{movie.overview}</p>
-            <p className="single-movie-release-date">{movie.release_date}</p>
-            <p className="single-movie-release-date">{movie.genres.join(', ')}</p>
+            <h1 className="mTitle">{movie.title}{movie.tag_line}</h1>
+            <h2 className='tag-line'>{movie.tagline}</h2>
+            <p className="single-movie-overview">Movie Overview: {movie.overview}</p>
+            <p className="single-movie-release-date">Release Date: {movie.release_date}</p>
+            <p className="single-movie-release-date">Genre: {movie.genres.join(', ')}</p>
           </div>
         </div>
 
-        <section className="movie-details-container">
-        </section>
+
       </div>
     </section>
   );

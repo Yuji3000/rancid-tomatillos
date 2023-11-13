@@ -9,16 +9,16 @@
 
 .image-container {
   /* border-style: solid;
-  border-radius: 5px;
-  border-color: yellow; */
-
+  border-radius: 5px; */
+  /* border-color: yellow; */
   height: auto;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .trailer-container {
   display: flex;
+  flex-direction: column;
   height: 100%;
   width: 25%;
   /* border-style: solid;
@@ -28,7 +28,7 @@
 
 .movie-backdrop {  
   height: 50%;
-  max-width: 40%;
+  max-width: 35%;
   border-radius: 5px;
   display: flex;
   margin: 10px 20px 10px 20px;
@@ -51,16 +51,36 @@
 }
 
 .movie-details-container {
+  /* height: 50%;
+  max-width: 40%;
+  border-radius: 5px;
   display: flex;
+  margin: 10px 20px 10px 20px; */
+  /* display: flex;
   justify-content: flex-end;
   margin-left: auto;
-  width: 50vw;
+  height: 5rem;
+  max-width: 40%; */
   /* border-style: solid;
   border-radius: 5px;
   border-color: pink; */
+}
+.movie-details-box {
+  height: 100%;
+  max-width: 60%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 1%;
+  padding-right: 1%;
+  margin: 10px 20px 10px 20px;
+  background: rgb(29, 28, 28);
+  border-radius: 5px;
+
+
 
 }
-
 .single-movie-release-date {
   color: white;
 }
@@ -71,4 +91,14 @@
 
 .single-movie-overview {
   color: white;
+}
+
+.mTitle {
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 250%;
+}
+
+.tag-line {
+  font-weight: bold;
 }
