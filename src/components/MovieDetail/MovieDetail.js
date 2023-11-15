@@ -67,9 +67,9 @@ function MovieDetail({ movieId }) {
           <div className="movie-details-box">
             <h1 className="mTitle">{movie.title}{movie.tag_line}</h1>
             <h2 className='tag-line'>{movie.tagline}</h2>
-            <p className="single-movie-overview">Movie Overview: {movie.overview}</p>
-            <p className="single-movie-release-date">Release Date: {movie.release_date}</p>
-            <p className="single-movie-release-date">Genre: {movie.genres.join(', ')}</p>
+            <p className="movie-overview">Movie Overview: {movie.overview}</p>
+            <p className="movie-release-date">Release Date: {movie.release_date}</p>
+            <p className="movie-genres">Genre: {movie.genres.join(', ')}</p>
           </div>
         </div>
 

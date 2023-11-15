@@ -1,6 +1,4 @@
-.mTitle {
-  color: white;
-}
+
 
 .loading{
   color: white;
@@ -35,11 +33,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  /* align-items: flex-start; */
-  /* padding-left: 1%;
-  padding-right: 1%; */
-  /* margin: 2px 50px 0px 0px; */
-  background: rgb(29, 28, 28);
   border-radius: 5px;
 
 }
@@ -65,17 +58,6 @@
   margin-bottom: 10px;
 }
 
-.single-movie-release-date {
-  color: white;
-}
-
-.movies-details-box {
-  color: white;
-}
-
-.single-movie-overview {
-  color: white;
-}
 
 .mTitle {
   margin-top: 5px;
@@ -85,4 +67,18 @@
 
 .tag-line {
   font-weight: bold;
+}
+.movie-overview {
+  color: white;
+  text-align: left;
+}
+.movie-release-date {
+  color: white;
+  text-align: left;
+}
+
+.movie-genres {
+  color: white;
+  text-align: left;
+
 }

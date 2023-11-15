@@ -20,3 +20,4 @@ function MoviesContainer({ movies }){
 }
 
 export default MoviesContainer
+
