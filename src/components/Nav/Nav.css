@@ -12,41 +12,66 @@
   justify-content: space-between;
 } */
 
-.page-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 0px 0px 0px;
-}
-
-.site-name-container {
-  display: flex;
-  text-align: center;
-  flex-direction: row;
-  align-items: center;
+.logo-image {
+  /* margin-top: 10px; */
+  margin-left: 10px;
+  max-width: 15%;
+  height: auto;
 }
 
 .site-name {
-  font-family: 'Russo One', sans-serif;
-  filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.8));
-  font-size: 3em;
-  color: rgb(255, 255, 255);
+  font-size: 2.8em;
+  margin-top: 40px;
+  margin-left: 5px;
 }
 
+.page-header {
+  display: flex;
+
+}
+
+.site-name-container {
+  /* border-style: solid;
+  border-radius: 5px; 
+  border-color: yellow;  */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 25%;
+}
+
+
+
 .link-container {
+  /* border-style: solid;
+  border-radius: 5px;
+  border-color: red; */
+  font-family: 'Russo One', sans-serif;
+  /* font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Calisto MT, Times New Roman, serif; */
+  font-size: 2em;
+  font-weight: bold;
   display: flex;
   width: 40%;
   gap: 20px;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  color: #ffffff;
 }
 
 .headerLink {
   text-decoration: none;
-  color: #ffffff;
   padding: 30px;
 }
 
+.header-logo {
+  height: auto;
+  width: 30vw;
+}
+
+.link-text {
+  color: white;
+  text-decoration: none;
+}
 
 /* .nav__black {
   background-color: black;

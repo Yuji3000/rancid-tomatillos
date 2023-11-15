@@ -61,7 +61,7 @@ function MovieDetail({ movieId }) {
             src={`https://www.youtube.com/embed/${trailer}`}
           ></iframe>
         </div>
-        <div className="image-container">
+        <div className="info-container">
           
           <img src={movie.backdrop_path} className="movie-backdrop" alt={movie.title} />
           <div className="movie-details-box">
@@ -81,6 +81,11 @@ function MovieDetail({ movieId }) {
 
 MovieDetail.propTypes = {
   movieId: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  tagline: PropTypes.string.isRequired,
+  overview: PropTypes.string.isRequired,
+  release_date: PropTypes.string.isRequired,
+  backdrop_path: PropTypes.string.isRequired,
 };
 
 export default MovieDetail;
