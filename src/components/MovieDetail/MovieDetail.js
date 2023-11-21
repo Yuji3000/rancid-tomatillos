@@ -47,11 +47,10 @@ function MovieDetail({ movieId }) {
     return <p className="loading">Loading...</p>;
   }
 
-  // console.log(movie)
+
   return (
     <section>
       <div>
-        
         <div className='trailer-container'>
           <iframe
             title="YouTube movie trailer"
@@ -62,8 +61,9 @@ function MovieDetail({ movieId }) {
           ></iframe>
         </div>
         <div className="info-container">
-          
-          <img src={movie.backdrop_path} className="movie-backdrop" alt={movie.title} />
+          <div className='backdrop-container'>
+            <img src={movie.backdrop_path} className="movie-backdrop" alt={movie.title} />
+          </div>
           <div className="movie-details-box">
             <h1 className="mTitle">{movie.title}{movie.tag_line}</h1>
             <h2 className='tag-line'>{movie.tagline}</h2>
@@ -80,12 +80,16 @@ function MovieDetail({ movieId }) {
 }
 
 MovieDetail.propTypes = {
-  movieId: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  tagline: PropTypes.string.isRequired,
-  overview: PropTypes.string.isRequired,
-  release_date: PropTypes.string.isRequired,
-  backdrop_path: PropTypes.string.isRequired,
+  movieDetail: PropTypes.arrayOf(
+    PropTypes.shape({
+      movieId: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      tagline: PropTypes.string.isRequired,
+      overview: PropTypes.string.isRequired,
+      release_date: PropTypes.string.isRequired,
+      backdrop_path: PropTypes.string.isRequired,
+    })
+  )
 };
 
 export default MovieDetail;

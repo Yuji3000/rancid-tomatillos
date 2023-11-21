@@ -6,24 +6,25 @@
 
 
 .info-container {
-  /* border-style: solid;
-  border-radius: 5px; 
-  border-color: yellow;  */
   height: 40vh;
   width: 100%;
   display: flex;
-  /* align-items: center; */
   justify-content: space-around;
 }
 
 
+.backdrop-container{
+  display: flex;
+  justify-content: center;
+}
 
 .movie-backdrop {  
+  max-width: 100%; 
   height: auto;
-  max-width: 35%;
+  width: 100%;
   border-radius: 5px;
-  /* display: flex;  */
-  /* margin: 0px 20px 10px 20px;  */
+  object-fit: contain;
+  margin-right: 10px;
 }
 
 .movie-details-box {
@@ -34,7 +35,9 @@
   flex-direction: column;
   justify-content: space-around;
   border-radius: 5px;
-
+  margin-left: 10px;
+  margin-top: 20px;
+  
 }
 .selected-movie-trailer {
   border-radius: 5px;
