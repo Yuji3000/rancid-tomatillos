@@ -43,6 +43,7 @@ function MovieDetail({ movieId }) {
     fetchMovieData();
   }, [movieId]);
 
+
   if (!movie) {
     return <p className="loading">Loading...</p>;
   }
@@ -61,15 +62,22 @@ function MovieDetail({ movieId }) {
           ></iframe>
         </div>
         <div className="info-container">
-          <div className='backdrop-container'>
+          
+          {/* <div className='backdrop-container'> */}
             <img src={movie.backdrop_path} className="movie-backdrop" alt={movie.title} />
-          </div>
-          <div className="movie-details-box">
-            <h1 className="mTitle">{movie.title}{movie.tag_line}</h1>
-            <h2 className='tag-line'>{movie.tagline}</h2>
-            <p className="movie-overview">Movie Overview: {movie.overview}</p>
-            <p className="movie-release-date">Release Date: {movie.release_date}</p>
-            <p className="movie-genres">Genre: {movie.genres.join(', ')}</p>
+          {/* </div> */}
+
+          <div className="details-container">
+            <div className='details'>
+              <div className='details-text'>
+                <h2 className='details-title'>{movie.title}</h2>
+                <p className='details-runtime'><span>Runtime:</span> {movie.runtime} minutes</p>
+                <p className='details-overview'><span>Overview:</span> {movie.overview}</p>
+                <p className='details-date'><span>Release Date:</span> {movie.release_date}</p>
+                <p className='details-genres'><span>Genres:</span> {movie.genres.join(', ')}</p>
+                <p className='details-rating'><span>Average Rating:</span> {movie.average_rating}</p>
+              </div>
+            </div>
           </div>
         </div>
 
